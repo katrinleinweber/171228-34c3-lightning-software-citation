@@ -1,18 +1,7 @@
 % Closing The Gaps In The Software Citation Workflow. One `@software{...}` Citekey At A Time.
 % Katrin Leinweber
-% 34c3
+% 34c3 - 2017-12-30
 
-<!--
-abstract: |
-    Academics credit each other's work by citing and referring. Thus is well established for journal articles, books, etc. Increasingly so even for data sets, because funders currently push for publishing data sets as well.
-    
-    Given the importance of software programs, scripts, packages, etc. in scientific work, it is clear that these will become more important  publishable units as well. Therefore, providing citation information is helpful for both developers and users.
-    
-    This lightning talk briefly explains a few options that everyone can quickly add to their source code.
-    
-- [ ] make screenshots
-- [ ] minimise links to site + keyword
--->
 
 ## Me: kind of a ["software librarian" at TIB(.eu)](https://www.tib.eu/en/research-development/non-textual-materials/)
 
