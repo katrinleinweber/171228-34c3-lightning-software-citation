@@ -46,7 +46,7 @@ abstract: |
 [guides.github.com/activities/citable-code](https://guides.github.com/activities/citable-code/)
 
 
-## `CITATION` files [@Hornik_Who_2012; @wilson_encouraging_2013]
+## 2. `CITATION` files [^CITATION]
 
 - express your citation wish (in BibTeX)
 - `@software{...}` support is growing ([BibLaTeX](https://ctan.org/tex-archive/macros/latex/contrib/biblatex), [biber](https://github.com/plk/biber), [Zotero](http://zotero.org/), etc.)
@@ -63,6 +63,7 @@ abstract: |
 }
 ```
 
+[^CITATION]: [Robin Wilson (2013) Encouraging citation of software – introducing CITATION files. blog.RTWilson.com/2013/08](http://blog.rtwilson.com/encouraging-citation-of- software-introducing-citation-files/).
 
 ## `codemeta.json`[^cmp] to cover user / researcher / machine stories:
 
@@ -91,12 +92,12 @@ abstract: |
     "url": "https://r-project.org"}, ...}
 ```
 
-[^cmr]: [ROpenSci.GitHub.io/codemetar](https://ropensci.github.io/codemetar/) [@Boettiger_ropensci/codemetar:_2017]
 
 # #tuwat: define [`CITATION`](https://www.software.ac.uk/blog/2013-09-02-encouraging-citation-software-introducing-citation-files) or [`codemeta`](https://codemeta.github.io/)`.json` files for your projects as 1^st^ step in the software citation workflow
 
 
 ## #tuwat++ (further downstream)
+[^cmr]: [ROpenSci.GitHub.io/codemetar](https://ropensci.github.io/codemetar/)
 
 - build [codemetaR](https://github.com/ropensci/codemetar)-like packages / plug-ins for other languages, IDEs, etc.
 - contribute [github.com/zotero/translators](http://github.com/zotero/translators) (.js to extract bibliographic info)
@@ -110,11 +111,9 @@ abstract: |
 
 > - [Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. (2016) Software citation principles. PeerJ Computer Science 2:e86 doi.org/10.7717/peerj-cs.86](https://peerj.com/articles/cs-86/) 
 > - [github.com/FORCE11/FORCE11-sciwg](https://github.com/force11/force11-sciwg) (Software Citation Implementation Working Group of the Future of Research Communication and E-Scholarship)
-> - [Roberto Di Cosmo, Stefano Zacchiroli. Software Heritage: Why and How to Preserve Software Source Code. iPRES 2017: 14th International Conference on Digital Preservation, Sep 2017, Kyoto, Japan](https://hal.archives-ouvertes.fr/hal-01590958/). [ipres2017.jp](https://ipres2017.jp/). [hal-01590958](https://hal.archives-ouvertes.fr/hal-01590958/)
 > - [WikiData `Katherine Thornton & Finn Årup Nielsen: Describing Software So We Can Cite Software.` media.ccc.de/v/wikidatacon2017-10013](https://media.ccc.de/v/wikidatacon2017-10013-describing_software_so_we_can_cite_software)
 
 
-## Bibliography
 
 
 <!-- scratch pad
