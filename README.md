@@ -5,114 +5,97 @@
 
 ## Me: kind of a ["software librarian" at TIB(.eu)](https://www.tib.eu/en/research-development/non-textual-materials/)
 
-- German National Library of Science and Technology, Hannover
-- working on R&D around scientific software projects, FAIR data principles, etc.
-- Disclaimer: Here just as an interested user, not on behalf of any org or project.
+> - German National Library of Science and Technology, Hannover
+> - scientific software services, FAIR data principles, etc.
+> - Disclaimer: I'm here as an interested user. Not on behalf of any organisation or project mentioned herein.
 
 ![](img/TIB.jpg)
 
 
-## State of the... Citation.
+## State of the Citation
 
-- academics credit each other's work by citing & referencing 
-    + *D*igital *O*bject *I*dentifiers (`doi: 10.something/something`)
-    + mostly journal articles, books, etc.
-    + even data, because of reproducibility crisis, funders, etc.
-- programs, scripts, software (packges, source code), etc. not (yet) equally publishable and citable
-- community infrastructure exists ([CTAN](https://ctan.org/), [CRAN](https://cran.r-project.org/), [Debian Science](https://wiki.debian.org/DebianScience), [SoftwareHeritage.org](https://www.softwareheritage.org/), etc.)
-    + #tuwat: support these projects
-- this talk: for others, outside these academia
+- scientists credit each other by citing journal articles, books, etc.
+    + see 34c3 talks: "[Science is Broken](https://media.ccc.de/v/34c3-9055-science_is_broken)" & "[Algorithmic science evaluation and power structure](https://media.ccc.de/v/34c3-9030-algorithmic_science_evaluation_and_power_structure_the_discourse_on_strategic_citation_and_citation_cartels)"
+    + reproducibility crisis => increased interest in data citations
+- also: software not equally accepted as citable unit of work, yet (scripts, packages, source code, etc.)
+- some community infrastructures: [Debian Science](https://wiki.debian.org/DebianScience), [rOpenSci](https://ropensci.org/), [CRAN](https://cran.r-project.org/), [swMATH.org](http://swmath.org/), [SoftwareHeritage.org](https://www.softwareheritage.org/), etc.
 
 
 
-# Solution examples (#tuwat at the source)
+# Solution examples for everyone else (#tuwat at the source)
 
 
-## Mint DOIs for Git release tags via GitHub repo to Zenodo(.org)
+## 1. [Guides.GitHub.com/activities/citable-code](https://guides.github.com/activities/citable-code/) + [Zenodo.org](https://zenodo.org/) + Git release = *D*igital *O*bject *I*dentifier…
 
 ![](img/zenodo-toggle-on.png)
 
-[guides.github.com/activities/citable-code](https://guides.github.com/activities/citable-code/)
+
+## … plus a free backup at CERN ;-)
+
+![](img/MWX.png)
 
 
-## 2. `CITATION` files [^CITATION]
+## 2. `CITATION` files
 
-- express your citation wish (in BibTeX)
-- `@software{...}` support is growing ([BibLaTeX](https://ctan.org/tex-archive/macros/latex/contrib/biblatex), [biber](https://github.com/plk/biber), [Zotero](http://zotero.org/), etc.)
-- like `LICENSE`, `COPYING`, `INSTALL` & Co.
+- like `LICENSE`, `COPYING`, `INSTALL`, etc.
+- Make a wish![^CITATION]
+- Don't be shy! Try `@software{...}`
+    + compatible with [BibLaTeX](https://ctan.org/tex-archive/macros/latex/contrib/biblatex), [biber](https://github.com/plk/biber), [Zotero](http://zotero.org/), etc.
+    + more examples: [GitHub.com/search?q=filename:CITATION](https://github.com/search?q=filename:CITATION)
 
 ```BibLaTeX
 @book{wickham_ggplot2_2009,
     author = {Hadley Wickham},
     title = {ggplot2: elegant graphics for data analysis},
-    publisher = {Springer New York},
-    year = {2009},
-    isbn = {978-0-387-98140-6},
-    url = {http://had.co.nz/ggplot2/book},
+    ...},
 }
 ```
 
-[^CITATION]: [Robin Wilson (2013) Encouraging citation of software – introducing CITATION files. blog.RTWilson.com/2013/08](http://blog.rtwilson.com/encouraging-citation-of- software-introducing-citation-files/).
-
-## `codemeta.json`[^cmp] to cover user / researcher / machine stories:
-
-- extract "citation metadata to give credit"
-- find "versions & dependencies for exact replication"
-- "discover useful software through keywords"
-
-[^cmp]: [codemeta.github.io](https://codemeta.github.io/)
+[^CITATION]: in BibTeX... [Robin Wilson (2013) "Encouraging citation of software – introducing CITATION files" blog.RTWilson.com/2013/08](http://blog.rtwilson.com/encouraging-citation-of- software-introducing-citation-files/)
 
 
-## `codemeta.json` example of codemetaR[^cmr] generator 
+## 3. upcoming: tool-agnostic `codemeta.json`[^cmp] standard
+
+- example from R community: native `DESCRIPTION` translated by "codemetaR" into:
 
 ```json
-{"@context": ["http://purl.org/codemeta/2.0", "http://schema.org"],
+{"@context": [
+    "http://purl.org/codemeta/2.0", 
+    "http://schema.org"
+    ],
   "@id": "https://doi.org10.5281/zenodo.1048320",
   "@type": "SoftwareSourceCode",
   "identifier": "codemetar",
-  "description": "The 'Codemeta' Project defines a 'JSON-LD' format for ...",
-  "issueTracker": "https://github.com/ropensci/codemetar/issues",
-  "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.2",
-  "programmingLanguage": {
-    "@type": "ComputerLanguage",
-    "name": "R",
-    "version": "3.4.2",
-    "url": "https://r-project.org"}, ...}
+  "description": "... defines a 'JSON-LD' format for ...",
+  "issueTracker": "https://github.com/ropensci/codemetar/issues", 
+  ...}
 ```
 
-
-# #tuwat: define [`CITATION`](https://www.software.ac.uk/blog/2013-09-02-encouraging-citation-software-introducing-citation-files) or [`codemeta`](https://codemeta.github.io/)`.json` files for your projects as 1^st^ step in the software citation workflow
-
-
-## #tuwat++ (further downstream)
-[^cmr]: [ROpenSci.GitHub.io/codemetar](https://ropensci.github.io/codemetar/)
-
-- build [codemetaR](https://github.com/ropensci/codemetar)-like packages / plug-ins for other languages, IDEs, etc.
-- contribute [github.com/zotero/translators](http://github.com/zotero/translators) (.js to extract bibliographic info)
-    + also for `CITATION` files or `codemeta.json`
-    + or for media.ccc.de ;-)
+[^cmp]: [CodeMeta.GitHub.io](https://codemeta.github.io/)
 
 
-## Thanks for your attention! Questions, comments, hints? [\@gittaca](https://twitter.com/gittaca) or [katrin.leinweber@tib.eu](mailto:katrin.leinweber@tib.eu?subject=34c3%20lightning%20talk), please! Thanks :-)
+
+# Offering metadata is necessary (but not sufficient!) for improving software citation workflows.
+
+
+## #tuwat++
+
+- in 2018, watch out for [CiteAs.org](http://citeas.org/) and [YAML-based Citation-File-Format.GitHub.io](https://citation-file-format.github.io/)
+- upstream: build [codemetaR](https://github.com/ropensci/codemetar)-like packages / plug-ins for other languages, IDEs, etc.
+- downstream: contribute [GitHub.com/Zotero/translators](http://github.com/zotero/translators) (.js to extract bibliographic info from websites)
+
+
+## #tuwat++ Zotero translator for [media.ccc.de](https://media.ccc.de/)
+
+![](img/media.ccc.de-future.png)
+
+
+## Thanks for your attention! Questions, comments, hints? [New issue here](https://github.com/katrinleinweber/171228-34c3-lightning-software-citation/issues/new), please! Thanks :-)
+
+[![License: CC BY 4.0](img/CC-BY-4.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ### Further reading / watching
 
 > - [Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. (2016) Software citation principles. PeerJ Computer Science 2:e86 doi.org/10.7717/peerj-cs.86](https://peerj.com/articles/cs-86/) 
-> - [github.com/FORCE11/FORCE11-sciwg](https://github.com/force11/force11-sciwg) (Software Citation Implementation Working Group of the Future of Research Communication and E-Scholarship)
-> - [WikiData `Katherine Thornton & Finn Årup Nielsen: Describing Software So We Can Cite Software.` media.ccc.de/v/wikidatacon2017-10013](https://media.ccc.de/v/wikidatacon2017-10013-describing_software_so_we_can_cite_software)
-
-
-
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
-<!-- scratch pad
-
-
-## Lots of initiatives...
-
-
-![](https://memegenerator.net/img/instances/500x/80935528/publish-all-the-research-data.jpg)
-
-
- -->
+> - [Katherine Thornton & Finn Årup Nielsen: "Describing Software So We Can Cite Software" media.ccc.de/v/wikidatacon2017-10013](https://media.ccc.de/v/wikidatacon2017-10013-describing_software_so_we_can_cite_software)
+> - [GitHub.com/FORCE11/FORCE11-SCIWG](https://github.com/force11/force11-sciwg) (Software Citation Implementation Working Group of the Future of Research Communication and E-Scholarship)
