@@ -41,7 +41,7 @@
 - Make a wish![^CITATION]
 - Don't be shy! Try `@software{...}`
     + compatible with [BibLaTeX](https://ctan.org/tex-archive/macros/latex/contrib/biblatex), [biber](https://github.com/plk/biber), [Zotero](http://zotero.org/), etc.
-    + more examples: [GitHub.com/search?q=filename:CITATION](https://github.com/search?q=filename:CITATION)
+    + more examples: [GitHub.com/search?q=filename:CITATION](https://github.com/search?q=filename:CITATION) (You need to be logged in to see the results.)
 
 ```BibLaTeX
 @book{wickham_ggplot2_2009,
