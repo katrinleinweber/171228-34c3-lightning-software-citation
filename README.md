@@ -3,7 +3,7 @@
 % 34c3 - 2017-12-30
 
 
-## Me: kind of a ["software librarian" at TIB(.eu)](https://www.tib.eu/en/research-development/non-textual-materials/)
+## Me: kind of a ["software librarian" at TIB(.eu)](https://www.tib.eu/en/research-development/non-textual-materials/focus-of-work/scientific-software/)
 
 > - German National Library of Science and Technology, Hannover
 > - scientific software services, FAIR data principles, etc.
